@@ -2,8 +2,8 @@ import java.util.Scanner;
 
 public class Calculator 
 {   
-    static int num1;
-    static int num2;
+    static double num1;
+    static double num2;
     static char operator;
     static Scanner input = new Scanner(System.in);
 
@@ -18,12 +18,12 @@ public class Calculator
             do
             {
                 System.out.print("Plz, Enter first number: ");
-                num1 = input.nextInt();
+                num1 = input.nextDouble();
 
                 input.nextLine();
 
                 System.out.print("Plz, Enter second number: ");
-                num2 = input.nextInt(); 
+                num2 = input.nextDouble();
 
                 System.out.println("Plz, Choose operator:\t+\t-\t*\t/\t");
                 operator = input.next().charAt(0);
@@ -36,9 +36,8 @@ public class Calculator
                     case '/' : division(); break;
                     default: System.out.println("Invalid Operator!"); break;
                 }
-
-                line();
                 
+                line();
                 System.out.println("Calculate again:  Y/N ???");
                 operator = input.next().charAt(0);
 
