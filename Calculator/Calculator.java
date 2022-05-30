@@ -12,39 +12,38 @@ public class Calculator
             System.out.println("\n"+"--- Calculator---"+"\n");
             System.out.println("//This program does basic arithmetics for two integers of"+"\n"+
             "<2,147,483,647> in range.//");
-            
-            System.out.print("Plz, Enter first number: ");
-            num1 = input.nextInt();
 
-            input.nextLine();
+            line();
 
-            System.out.print("Plz, Enter first number: ");
-            num2 = input.nextInt(); 
-
-            menu();
-        }
-
-    public static void menu()
-    {
-        do 
-        {
-            System.out.println("Plz, Choose operator:\t+\t-\t*\t/\t");
-            operator = input.next().charAt(0);
-
-            switch(operator)
+            do
             {
-                case '+' : addition(); break;
-                case '-' : subtraction(); break;
-                case '*' : multiplication(); break;
-                case '/' : division(); break;
-                default: System.out.println("Invalid Operator!"); break;
-            }
+                System.out.print("Plz, Enter first number: ");
+                num1 = input.nextInt();
 
-            System.out.println("Calculate again:  Y/N ???");
-            operator = input.next().charAt(0);
+                input.nextLine();
 
-        } while( operator != 'N');      
-    }
+                System.out.print("Plz, Enter second number: ");
+                num2 = input.nextInt(); 
+
+                System.out.println("Plz, Choose operator:\t+\t-\t*\t/\t");
+                operator = input.next().charAt(0);
+
+                switch(operator)
+                {
+                    case '+' : addition(); break;
+                    case '-' : subtraction(); break;
+                    case '*' : multiplication(); break;
+                    case '/' : division(); break;
+                    default: System.out.println("Invalid Operator!"); break;
+                }
+
+                line();
+                
+                System.out.println("Calculate again:  Y/N ???");
+                operator = input.next().charAt(0);
+
+            } while ( operator != 'N');
+        }
 
     public static void addition()
     {
