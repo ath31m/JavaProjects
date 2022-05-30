@@ -10,8 +10,6 @@ public class Calculator
     public static void main(String[] args)
         {   
             System.out.println("\n"+"--- Calculator---"+"\n");
-            System.out.println("//This program does basic arithmetics for two integers of"+"\n"+
-            "<2,147,483,647> in range.//");
 
             line();
 
@@ -46,24 +44,24 @@ public class Calculator
 
     public static void addition()
     {
-        System.out.println("The answer is: "+(num1+num2)+".");
+        System.out.println("The answer is: "+"( "+num1+" "+operator+" "+num2+" )"+"\t=  "+(num1+num2)+" .");
     }
 
     public static void subtraction()
     {
-        System.out.println("The answer is: "+(num1-num2)+".");
+        System.out.println("The answer is: "+"( "+num1+" "+operator+" "+num2+" )"+"\t=  "+(num1-num2)+" .");
     }
 
     public static void multiplication()
     {
-        System.out.println("The answer is: "+(num1*num2)+".");
+        System.out.println("The answer is: "+"( "+num1+" "+operator+" "+num2+" )"+"\t=  "+(num1*num2)+" .");
     }
 
     public static void division()
     {
         if (num2 != 0)
         {
-            System.out.println("The answer is: "+(num1/num2)+".");
+            System.out.println("The answer is: "+"( "+num1+" "+operator+" "+num2+" )"+"\t=  "+(num1/num2)+" .");
         }
         else
         {
