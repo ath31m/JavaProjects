@@ -8,6 +8,7 @@ public class test
     static int numberOfRooms;
     static int costType;
     static int costStandard;
+    static char decision;
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[]args)
@@ -19,15 +20,21 @@ public class test
         System.out.print("=== Plz, Enter your name === \n");
         customerName = input.nextLine();
 
-        line();
-        input.nextLine();
+        do
+        {
+            line();
 
-        type();
-        
-        input.nextLine();
-        line();
+            type();
+            
+            input.nextLine();
+            line();
+    
+            number();
 
-        number();
+            System.out.println(" === Order Confirmation: Y/N ?? === ");
+            decision = input.next().charAt(0); 
+
+        }while(decision != 'Y');
 
         calculation();
         
@@ -35,9 +42,12 @@ public class test
 
     public static void number()
     {
-        System.out.println("=== Plz, choose number of rooms ===");
-        System.out.println("1: 2: 3: 4: 5: 6: 7: 8: 9: 10 ");
-        numberOfRooms = input.nextInt();
+        do
+        {
+            System.out.println("=== Plz, choose number of rooms ===");
+            System.out.println("1: 2: 3: 4: 5: 6: 7: 8: 9: 10 ");
+            numberOfRooms = input.nextInt();
+        }while(numberOfRooms>10);
     }
 
     public static void type()

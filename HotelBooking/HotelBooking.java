@@ -13,7 +13,7 @@ public class HotelBooking
 
     public static void main(String[]args)
     {
-        System.out.println("\n"+"=== Welcome to Hotel California ==="+"\n");   
+        System.out.println("\n"+"=== Welcome to Hotel California ===");   
 
         line();
 
@@ -21,33 +21,34 @@ public class HotelBooking
         customerName = input.nextLine();
 
         line();
-        input.nextLine();
-
         
-
-        input.nextLine();
-        line();
-
+        do
+        {
+            type();
         
+            input.nextLine();
+            line();
 
-        input.nextLine();
+            standard();
+
+            input.nextLine();
+            line();
+
+            number();
+
+            String decision;
+            System.out.println("Order Confirmation: Y/N ???");
+            decision = input.next();
+
+        } while();
+
         line();
-
-        System.out.println("=== Plz, choose number of rooms ===");
-        System.out.println("1: 2: 3: 4: 5: 6: 7: 8: 9: 10 ");
-        numberOfRooms = input.nextInt();
 
         totalCost = (costType + costStandard) * numberOfRooms ;
 
-        System.out.println( customerName +  totalCost);
+        System.out.println( customerName + "\t"+ totalCost);
    
     }
-
-
-
-
-
-
 
 
 public static void type()
@@ -69,7 +70,7 @@ public static void type()
             case 3: costType = 300; break;
             case 4: costType = 200; break;
             case 5: costType = 100; break;
-            default: System.out.println("Invalid room type");
+            default: System.out.println("Invalid room type\n");
         }
     } while(roomType>5);
 }
@@ -96,6 +97,16 @@ public static void standard()
             default: System.out.println("Invalid room Standard\n");
         }
     } while(roomStandard>5);
+}
+
+public static void number()
+{
+    do
+    {
+        System.out.println("=== Plz, choose number of rooms ===");
+        System.out.println("1: 2: 3: 4: 5: 6: 7: 8: 9: 10 ");
+        numberOfRooms = input.nextInt();
+    } while(numberOfRooms>10);
 }
 
     public static void line()
