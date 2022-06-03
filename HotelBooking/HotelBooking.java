@@ -8,6 +8,7 @@ public class HotelBooking
     static int numberOfRooms;
     static int costType;
     static int costStandard;
+    static int totalCost;
     static Scanner input = new Scanner(System.in);
 
     public static void main(String[]args)
@@ -68,9 +69,10 @@ public class HotelBooking
         System.out.println("1: 2: 3: 4: 5: 6: 7: 8: 9: 10 ");
         numberOfRooms = input.nextInt();
 
+        totalCost = (costType + costStandard) * numberOfRooms ;
 
-
-        
+        System.out.println( customerName +  totalCost);
+   
     }
 
 
