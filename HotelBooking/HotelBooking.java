@@ -43,7 +43,7 @@ public class HotelBooking
             System.out.println("Order Confirmation: Y/N ???");
             decision = input.next().charAt(0);
 
-        } while(decision != 'Y');
+        } while(decision != 'Y'); // while(decision.equals('Y'))
 
         receipt();
     }
